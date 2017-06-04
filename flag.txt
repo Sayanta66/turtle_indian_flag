@@ -1,0 +1,41 @@
+to lef :val
+  if :val > 0 [
+	lt 90
+    fd 200
+    rt 90
+    fd 1
+    rig :val-1
+  ]
+end
+
+to rig :val
+  if :val > 0 [
+	rt 90
+    fd 200
+    lt 90
+    fd 1
+    lef :val-1
+  ]
+end
+
+setpencolor 2
+rig 50
+
+setpencolor 7
+rig 50
+setpencolor 14
+rig 50
+
+rt 180
+fd 50
+lt 90
+fd 100
+setpencolor 0
+repeat 180 [ fd 1 rt 2]
+
+rt 180
+fd 10
+rt 180
+
+rt 90
+repeat 12 [ fd 50 lt 60 fd 5 lt 90]
